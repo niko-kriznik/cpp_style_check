@@ -1,4 +1,21 @@
-Checks: '-*,readability-identifier-naming'
+Checks: >
+  -*,
+  bugprone-*,
+  clang-analyzer-*,
+  misc-*,
+  -misc-non-private-member-variables-in-classes,
+  modernize-*,
+  -modernize-avoid-c-arrays,
+  -modernize-use-trailing-return-type,
+  -modernize-use-nodiscard,
+  performance-*,
+  portability-*,
+  readability-*,
+  -readability-avoid-const-params-in-decls,
+  -readability-convert-member-functions-to-static,
+  -readability-named-parameter,
+  -readability-magic-numbers
+
 CheckOptions:
   # Common
   - key: readability-identifier-naming.VariableCase
@@ -26,6 +43,10 @@ CheckOptions:
   - key: readability-identifier-naming.EnumCase
     value: CamelCase
   - key: readability-identifier-naming.EnumConstantCase
+    value: UPPER_CASE
+  - key: readability-identifier-naming.ScopedEnumCase
+    value: CamelCase
+  - key: readability-identifier-naming.ScopedEnumConstantCase
     value: UPPER_CASE
   # Functions
   - key: readability-identifier-naming.FunctionCase
