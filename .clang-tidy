@@ -14,7 +14,8 @@ Checks: >
   -readability-avoid-const-params-in-decls,
   -readability-convert-member-functions-to-static,
   -readability-named-parameter,
-  -readability-magic-numbers
+  -readability-magic-numbers,
+  -readability-redundant-access-specifiers
 
 CheckOptions:
   # Common
@@ -24,6 +25,10 @@ CheckOptions:
     value: lower_case
   - key: readability-identifier-naming.StaticConstantCase
     value: UPPER_CASE
+  - key: readability-identifier-naming.GlobalVariableCase
+    value: lower_case
+  - key: readability-identifier-naming.GlobalVariablePrefix
+    value: g_
   # Structs and classes
   - key: readability-identifier-naming.StructCase
     value: CamelCase

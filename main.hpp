@@ -2,6 +2,7 @@
 
 #include <cstddef>
 #include <cstdint>
+#include <string>
 
 enum ExampleEnum {
   EXAMPLE_NONE,
@@ -27,6 +28,9 @@ struct Buffer
 
 class ExampleClass
 {
+  public:
+    static std::string s_title;
+
   public:
     ExampleClass() = default;
 
