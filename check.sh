@@ -6,9 +6,9 @@ ENTRY_SUFFIX=".o.json"
 COMPILER_OPTIONS="--std=c++17
                   -Wall
                   -Wextra"
-CLANG_TIDY_OPTIONS="--use-color 
+CLANG_TIDY_OPTIONS="--use-color
                     --format-style=file
-                    --header-filter=.* 
+                    --header-filter=.*
                     -p ${OUT_DIR}/compile_commands.json
                     *.cpp"
 
